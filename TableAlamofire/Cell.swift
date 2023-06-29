@@ -24,43 +24,7 @@ class Cell: UITableViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .left
-        label.textColor = .lightGray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    lazy var type: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .light)
-        label.textAlignment = .left
-        label.textColor = .lightGray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    lazy var rarity: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .light)
-        label.textAlignment = .left
-        label.textColor = .lightGray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    lazy var setName: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .light)
-        label.textAlignment = .left
-        label.textColor = .lightGray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    lazy var text: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .thin)
-        label.textAlignment = .left
-        label.textColor = .lightGray
+//        label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -68,7 +32,7 @@ class Cell: UITableViewCell {
     // MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        accessoryType = .disclosureIndicator
+        accessoryType = .none
         contentView.clipsToBounds = true
         setupHierarcy()
         setupLayout()
@@ -82,10 +46,10 @@ class Cell: UITableViewCell {
     private func setupHierarcy() {
         addSubview(name)
         addSubview(manaCost)
-        addSubview(type)
-        addSubview(rarity)
-        addSubview(setName)
-        addSubview(text)
+//        addSubview(type)
+//        addSubview(rarity)
+//        addSubview(setName)
+//        addSubview(text)
     }
 
     private func setupLayout() {
@@ -96,18 +60,18 @@ class Cell: UITableViewCell {
             manaCost.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
             manaCost.topAnchor.constraint(equalTo: topAnchor, constant: 10),
 
-            type.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 10),
-            type.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
-
-            rarity.topAnchor.constraint(equalTo: type.bottomAnchor, constant: 10),
-            rarity.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
-
-            setName.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-            setName.centerYAnchor.constraint(equalTo: rarity.centerYAnchor),
-
-            text.topAnchor.constraint(equalTo: rarity.bottomAnchor, constant: 10),
-            text.leftAnchor.constraint(equalTo: leftAnchor,constant: 10),
-            text.rightAnchor.constraint(equalTo: rightAnchor, constant: -10)
+//            type.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 10),
+//            type.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+//
+//            rarity.topAnchor.constraint(equalTo: type.bottomAnchor, constant: 10),
+//            rarity.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+//
+//            setName.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
+//            setName.centerYAnchor.constraint(equalTo: rarity.centerYAnchor),
+//
+//            text.topAnchor.constraint(equalTo: rarity.bottomAnchor, constant: 10),
+//            text.leftAnchor.constraint(equalTo: leftAnchor,constant: 10),
+//            text.rightAnchor.constraint(equalTo: rightAnchor, constant: -10)
         ])
     }
 
@@ -116,18 +80,18 @@ class Cell: UITableViewCell {
         super.prepareForReuse()
         name.text = nil
         manaCost.text = nil
-        type.text = nil
-        rarity.text = nil
-        setName.text = nil
-        text.text = nil
+//        type.text = nil
+//        rarity.text = nil
+//        setName.text = nil
+//        text.text = nil
     }
 
     public func configure(model: Card?) {
-        name.text = "Name: \(model?.name ?? "Unknowned")"
-        manaCost.text = "Mana cost: \(model?.manaCost ?? "Unknowned")"
-        type.text = "Type: \(model?.text ?? "Unknowned")"
-        rarity.text = "Rarity: \(model?.rarity ?? "Unknowned")"
-        setName.text = "Set name: \(model?.text ?? "Unknowned")"
-        text.text = "\(model?.text ?? "Unknowned")"
+        name.text = "\(model?.name ?? "Unknowned")"
+        manaCost.text = "\(model?.manaCost ?? "Unknowned")"
+//        type.text = "Type: \(model?.text ?? "Unknowned")"
+//        rarity.text = "Rarity: \(model?.rarity ?? "Unknowned")"
+//        setName.text = "Set name: \(model?.text ?? "Unknowned")"
+//        text.text = "\(model?.text ?? "Unknowned")"
     }
 }

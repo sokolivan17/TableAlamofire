@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var cards: [Card] = []
 
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
+        let tableView = UITableView(frame: .zero)
         tableView.register(Cell.self, forCellReuseIdentifier: Cell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Cards"
+        view.backgroundColor = .systemBackground
         setupHierarchy()
         setupLayout()
         fetchCards()
@@ -52,7 +54,6 @@ extension ViewController {
         .responseDecodable(of: Cards.self) { (response) in
             guard let cards = response.value else { return }
             self.cards = cards.cards
-            print(self.cards)
             self.tableView.reloadData()
       }
     }
@@ -69,6 +70,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let card = cards[indexPath.row]
         cell?.configure(model: card)
         return cell ?? UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let card = cards[indexPath.row]
+
+        let viewController = DetailViewController()
+        tableView.deselectRow(at: indexPath, animated: true)
+        viewController.card = card
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
