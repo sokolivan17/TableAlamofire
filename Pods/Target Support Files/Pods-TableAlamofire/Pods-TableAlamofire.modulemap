@@ -1,0 +1,6 @@
+module Pods_TableAlamofire {
+  umbrella header "Pods-TableAlamofire-umbrella.h"
+
+  export *
+  module * { export * }
+}
