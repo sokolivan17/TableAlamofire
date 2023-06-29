@@ -7,10 +7,10 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     var card: Card?
 
-    lazy var type: UILabel = {
+    private lazy var type: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .left
@@ -19,16 +19,15 @@ class DetailViewController: UIViewController {
         return label
     }()
 
-    lazy var rarity: UILabel = {
+    private lazy var rarity: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .medium)
         label.textAlignment = .left
-
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    lazy var setName: UILabel = {
+    private lazy var setName: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .light)
         label.textAlignment = .left
@@ -37,7 +36,7 @@ class DetailViewController: UIViewController {
         return label
     }()
 
-    lazy var text: UILabel = {
+    private lazy var text: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .light)
         label.textAlignment = .left
@@ -46,12 +45,14 @@ class DetailViewController: UIViewController {
         return label
     }()
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Card details"
         view.backgroundColor = .systemBackground
         setupHierarcy()
         setupLayout()
-        configure(model: card)
+        configure()
     }
 
     // MARK: - Setup
@@ -83,10 +84,10 @@ class DetailViewController: UIViewController {
     }
 
     // MARK: - Configure
-    private func configure(model: Card?) {
-        type.text = "Type: \(model?.text ?? "Unknowned")"
-        rarity.text = "Rarity: \(model?.rarity ?? "Unknowned")"
-        setName.text = "Set name: \(model?.text ?? "Unknowned")"
-        text.text = "\(model?.text ?? "Unknowned")"
+    private func configure() {
+        type.text = "Type: \(card?.text ?? "Unknowned")"
+        rarity.text = "Rarity: \(card?.rarity ?? "Unknowned")"
+        setName.text = "Set name: \(card?.text ?? "Unknowned")"
+        text.text = "\(card?.text ?? "Unknowned")"
     }
 }
