@@ -14,6 +14,8 @@
 		B5C4E0DA2A4D990100EE25C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C4E0D82A4D990100EE25C2 /* Main.storyboard */; };
 		B5C4E0DC2A4D990300EE25C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */; };
 		B5C4E0DF2A4D990300EE25C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C4E0DD2A4D990300EE25C2 /* LaunchScreen.storyboard */; };
+		B5C4E0E72A4D9FB000EE25C2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0E62A4D9FB000EE25C2 /* Model.swift */; };
+		B5C4E0E92A4DA20800EE25C2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0E82A4DA20800EE25C2 /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5C4E0DE2A4D990300EE25C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C4E0E02A4D990300EE25C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C4E0E62A4D9FB000EE25C2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B5C4E0E82A4DA20800EE25C2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		F81327A0AAA8E0E7E5049683 /* Pods-TableAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableAlamofire.release.xcconfig"; path = "Target Support Files/Pods-TableAlamofire/Pods-TableAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +52,6 @@
 				9A484B1AFE159C80998D6527 /* Pods-TableAlamofire.debug.xcconfig */,
 				F81327A0AAA8E0E7E5049683 /* Pods-TableAlamofire.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -64,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				B5C4E0D12A4D990100EE25C2 /* TableAlamofire */,
-				B5C4E0D02A4D990100EE25C2 /* Products */,
 				577F58F1C2E292B21138B2E6 /* Pods */,
 				B3E1E757D71BA2D93B1AA73C /* Frameworks */,
 			);
@@ -76,6 +78,7 @@
 				B5C4E0CF2A4D990100EE25C2 /* TableAlamofire.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B5C4E0D12A4D990100EE25C2 /* TableAlamofire */ = {
@@ -84,10 +87,13 @@
 				B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */,
 				B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */,
 				B5C4E0D62A4D990100EE25C2 /* ViewController.swift */,
+				B5C4E0E62A4D9FB000EE25C2 /* Model.swift */,
+				B5C4E0E82A4DA20800EE25C2 /* Cell.swift */,
 				B5C4E0D82A4D990100EE25C2 /* Main.storyboard */,
 				B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */,
 				B5C4E0DD2A4D990300EE25C2 /* LaunchScreen.storyboard */,
 				B5C4E0E02A4D990300EE25C2 /* Info.plist */,
+				B5C4E0D02A4D990100EE25C2 /* Products */,
 			);
 			path = TableAlamofire;
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 			files = (
 				B5C4E0D72A4D990100EE25C2 /* ViewController.swift in Sources */,
 				B5C4E0D32A4D990100EE25C2 /* AppDelegate.swift in Sources */,
+				B5C4E0E92A4DA20800EE25C2 /* Cell.swift in Sources */,
 				B5C4E0D52A4D990100EE25C2 /* SceneDelegate.swift in Sources */,
+				B5C4E0E72A4D9FB000EE25C2 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
