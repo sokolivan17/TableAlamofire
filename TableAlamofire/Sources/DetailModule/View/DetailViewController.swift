@@ -9,6 +9,7 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     var card: Card?
+    lazy var presenter = DetailCardPresenter(view: self, networkServise: CardsService(), card: card)
 
     private lazy var name = makeLabel(ofSize: 20, weight: .medium)
     private lazy var type = makeLabel(weight: .regular)
@@ -32,7 +33,7 @@ final class DetailViewController: UIViewController {
         view.backgroundColor = .systemBackground
         setupHierarcy()
         setupLayout()
-        configure()
+        presenter.setCard()
     }
 
     // MARK: - Setup
@@ -51,9 +52,10 @@ final class DetailViewController: UIViewController {
             stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -500)
         ])
     }
+}
 
-    // MARK: - Configure
-    private func configure() {
+extension DetailViewController: DetailCardView {
+    func setCard(card: Card?) {
         name.text = "Name: \(card?.name ?? "Unknowned")"
         type.text = "Type: \(card?.type ?? "Unknowned")"
         rarity.text = "Rarity: \(card?.rarity ?? "Unknowned")"
@@ -61,4 +63,3 @@ final class DetailViewController: UIViewController {
         text.text = "Description: \(card?.text ?? "Unknowned")"
     }
 }
-

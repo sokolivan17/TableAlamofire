@@ -118,8 +118,8 @@
 			children = (
 				B5A7DBCE2A4EE70200BDF7EF /* App */,
 				B5A7DBDC2A4EF7D400BDF7EF /* Network */,
-				B5A7DBE22A4F1B9500BDF7EF /* MainModule */,
 				B5A7DBD22A4EE74E00BDF7EF /* Factories */,
+				B5A7DBE22A4F1B9500BDF7EF /* MainModule */,
 				B5A7DBDF2A4F1B4A00BDF7EF /* DetailModule */,
 			);
 			path = Sources;
