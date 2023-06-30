@@ -1,5 +1,5 @@
 //
-//  Presenter.swift
+//  MainPresenter.swift
 //  TableAlamofire
 //
 //  Created by Ivan Sokol on 30.06.2023.
@@ -12,13 +12,18 @@ protocol CardsView: AnyObject {
     func setEmptyCards()
 }
 
-class CardsPresenter {
-    private let cardsService: CardsService
+protocol MainCardsViewPresenter: AnyObject {
+    init(view: CardsView, networkService: CardsServiceProtocol)
+    func getCards()
+}
+
+class CardsPresenter: MainCardsViewPresenter {
+    private let cardsService: CardsServiceProtocol
     weak var cardsView: CardsView?
 
-    init(cardsService: CardsService, cardsView: CardsView) {
-        self.cardsService = cardsService
-        self.cardsView = cardsView
+    required init(view: CardsView, networkService: CardsServiceProtocol) {
+        self.cardsService = networkService
+        self.cardsView = view
     }
 
     func getCards() {

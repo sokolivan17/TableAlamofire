@@ -7,7 +7,11 @@
 
 import Alamofire
 
-class CardsService {
+protocol CardsServiceProtocol {
+    func getCards(callBack: @escaping ([Card]) -> Void)
+}
+
+class CardsService: CardsServiceProtocol {
     func getCards(callBack: @escaping ([Card]) -> Void) {
         var cards = [Card]()
         AF.request("https://api.magicthegathering.io/v1/cards")

@@ -8,7 +8,7 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    lazy var cardsPresenter = CardsPresenter(cardsService: CardsService(), cardsView: self)
+    lazy var cardsPresenter = CardsPresenter(view: self, networkService: CardsService())
     var cardsToDisplay: [Card] = []
 
     private lazy var tableView: UITableView = {
