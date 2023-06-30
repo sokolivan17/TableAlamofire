@@ -2,14 +2,13 @@
 //  ViewController.swift
 //  TableAlamofire
 //
-//  Created by Ваня Сокол on 29.06.2023.
+//  Created by Ivan Sokol on 29.06.2023.
 //
 
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
     var cards: [Card] = []
 
     private lazy var tableView: UITableView = {
@@ -48,7 +47,7 @@ class ViewController: UIViewController {
 
 // MARK: - Alamofire
 extension ViewController {
-    func fetchCards() {
+    private func fetchCards() {
       AF.request("https://api.magicthegathering.io/v1/cards")
         .validate()
         .responseDecodable(of: Cards.self) { (response) in

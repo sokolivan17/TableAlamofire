@@ -2,31 +2,16 @@
 //  Cell.swift
 //  TableAlamofire
 //
-//  Created by Ваня Сокол on 29.06.2023.
+//  Created by Ivan Sokol on 29.06.2023.
 //
 
 import UIKit
 
-class Cell: UITableViewCell {
-
+final class Cell: UITableViewCell {
     static var identifier = "Cell"
 
-    // MARK: - Properties
-    lazy var name: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .regular)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    lazy var manaCost: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .regular)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private lazy var name = makeLabel(weight: .regular)
+    private lazy var manaCost = makeLabel(weight: .regular)
 
     // MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

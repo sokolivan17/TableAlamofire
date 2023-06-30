@@ -2,7 +2,7 @@
 //  Model.swift
 //  TableAlamofire
 //
-//  Created by Ваня Сокол on 29.06.2023.
+//  Created by Ivan Sokol on 29.06.2023.
 //
 
 import Foundation
