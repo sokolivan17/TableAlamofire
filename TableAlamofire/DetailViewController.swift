@@ -10,39 +10,19 @@ import UIKit
 final class DetailViewController: UIViewController {
     var card: Card?
 
-    private lazy var type: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .regular)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private lazy var name = makeLabel(ofSize: 20, weight: .medium)
+    private lazy var type = makeLabel(weight: .regular)
+    private lazy var rarity = makeLabel(weight: .regular)
+    private lazy var setName = makeLabel(weight: .regular)
+    private lazy var text = makeLabel(weight: .light, numberOfLines: 0)
 
-    private lazy var rarity: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .medium)
-        label.textAlignment = .left
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    private lazy var setName: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .light)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
-    private lazy var text: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .light)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var stackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .leading
+        stack.distribution = .equalSpacing
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
     }()
 
     // MARK: - Lifecycle
@@ -57,37 +37,29 @@ final class DetailViewController: UIViewController {
 
     // MARK: - Setup
     private func setupHierarcy() {
-        view.addSubview(type)
-        view.addSubview(rarity)
-        view.addSubview(setName)
-        view.addSubview(text)
+        view.addSubview(stackView)
     }
 
     private func setupLayout() {
+        let labels = [name, type, rarity, setName, text]
+        labels.forEach { stackView.addArrangedSubview($0) }
+
         NSLayoutConstraint.activate([
-            type.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            type.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
-            type.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
-
-            rarity.topAnchor.constraint(equalToSystemSpacingBelow: type.bottomAnchor, multiplier: 2),
-            rarity.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
-            rarity.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
-
-            setName.topAnchor.constraint(equalToSystemSpacingBelow: rarity.bottomAnchor, multiplier: 2),
-            setName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
-            setName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
-
-            text.topAnchor.constraint(equalToSystemSpacingBelow: setName.bottomAnchor, multiplier: 2),
-            text.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
-            text.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -500)
         ])
     }
 
     // MARK: - Configure
     private func configure() {
-        type.text = "Type: \(card?.text ?? "Unknowned")"
+        name.text = "Name: \(card?.name ?? "Unknowned")"
+        type.text = "Type: \(card?.type ?? "Unknowned")"
         rarity.text = "Rarity: \(card?.rarity ?? "Unknowned")"
-        setName.text = "Set name: \(card?.text ?? "Unknowned")"
-        text.text = "\(card?.text ?? "Unknowned")"
+        setName.text = "Set name: \(card?.setName ?? "Unknowned")"
+        text.text = "Description: \(card?.text ?? "Unknowned")"
     }
 }
+
+
