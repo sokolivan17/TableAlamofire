@@ -8,25 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		1CA5AD9626ACEBC9F7BAC428 /* libPods-TableAlamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B426CE0A6BBD39BA17F9CEC /* libPods-TableAlamofire.a */; };
+		B5A7DBCD2A4ED52000BDF7EF /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DBCC2A4ED52000BDF7EF /* Factories.swift */; };
+		B5A7DBD82A4EF4FE00BDF7EF /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DBD72A4EF4FE00BDF7EF /* MainPresenter.swift */; };
+		B5A7DBDB2A4EF7C700BDF7EF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DBDA2A4EF7C700BDF7EF /* Network.swift */; };
+		B5A7DBDE2A4F1AF900BDF7EF /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DBDD2A4F1AF900BDF7EF /* DetailPresenter.swift */; };
 		B5C4E0D32A4D990100EE25C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */; };
 		B5C4E0D52A4D990100EE25C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */; };
 		B5C4E0D72A4D990100EE25C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0D62A4D990100EE25C2 /* ViewController.swift */; };
-		B5C4E0DA2A4D990100EE25C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C4E0D82A4D990100EE25C2 /* Main.storyboard */; };
 		B5C4E0DC2A4D990300EE25C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */; };
 		B5C4E0DF2A4D990300EE25C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C4E0DD2A4D990300EE25C2 /* LaunchScreen.storyboard */; };
+		B5C4E0E72A4D9FB000EE25C2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0E62A4D9FB000EE25C2 /* Model.swift */; };
+		B5C4E0E92A4DA20800EE25C2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0E82A4DA20800EE25C2 /* Cell.swift */; };
+		B5C4E0EB2A4DC72300EE25C2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0EA2A4DC72300EE25C2 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B426CE0A6BBD39BA17F9CEC /* libPods-TableAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TableAlamofire.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A484B1AFE159C80998D6527 /* Pods-TableAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableAlamofire.debug.xcconfig"; path = "Target Support Files/Pods-TableAlamofire/Pods-TableAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
+		B5A7DBCC2A4ED52000BDF7EF /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		B5A7DBD72A4EF4FE00BDF7EF /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		B5A7DBDA2A4EF7C700BDF7EF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		B5A7DBDD2A4F1AF900BDF7EF /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		B5C4E0CF2A4D990100EE25C2 /* TableAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B5C4E0D62A4D990100EE25C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B5C4E0D92A4D990100EE25C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5C4E0DE2A4D990300EE25C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C4E0E02A4D990300EE25C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C4E0E62A4D9FB000EE25C2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B5C4E0E82A4DA20800EE25C2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		B5C4E0EA2A4DC72300EE25C2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F81327A0AAA8E0E7E5049683 /* Pods-TableAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableAlamofire.release.xcconfig"; path = "Target Support Files/Pods-TableAlamofire/Pods-TableAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +60,6 @@
 				9A484B1AFE159C80998D6527 /* Pods-TableAlamofire.debug.xcconfig */,
 				F81327A0AAA8E0E7E5049683 /* Pods-TableAlamofire.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -60,11 +71,141 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B5A7DBCE2A4EE70200BDF7EF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */,
+				B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B5A7DBCF2A4EE72100BDF7EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0E62A4D9FB000EE25C2 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5A7DBD02A4EE73600BDF7EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0D62A4D990100EE25C2 /* ViewController.swift */,
+				B5A7DBD12A4EE73D00BDF7EF /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5A7DBD12A4EE73D00BDF7EF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0E82A4DA20800EE25C2 /* Cell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B5A7DBD22A4EE74E00BDF7EF /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBCC2A4ED52000BDF7EF /* Factories.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		B5A7DBD32A4EE77E00BDF7EF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBCE2A4EE70200BDF7EF /* App */,
+				B5A7DBDC2A4EF7D400BDF7EF /* Network */,
+				B5A7DBD22A4EE74E00BDF7EF /* Factories */,
+				B5A7DBE22A4F1B9500BDF7EF /* MainModule */,
+				B5A7DBDF2A4F1B4A00BDF7EF /* DetailModule */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B5A7DBD42A4EE78F00BDF7EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0DD2A4D990300EE25C2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B5A7DBD52A4EE7A300BDF7EF /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0E02A4D990300EE25C2 /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		B5A7DBD62A4EE7B000BDF7EF /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */,
+				B5A7DBD42A4EE78F00BDF7EF /* Storyboards */,
+				B5A7DBD52A4EE7A300BDF7EF /* Configs */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		B5A7DBD92A4EF53700BDF7EF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBD72A4EF4FE00BDF7EF /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B5A7DBDC2A4EF7D400BDF7EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBDA2A4EF7C700BDF7EF /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B5A7DBDF2A4F1B4A00BDF7EF /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBE12A4F1B8000BDF7EF /* View */,
+				B5A7DBE02A4F1B5400BDF7EF /* Presenter */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		B5A7DBE02A4F1B5400BDF7EF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBDD2A4F1AF900BDF7EF /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B5A7DBE12A4F1B8000BDF7EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0EA2A4DC72300EE25C2 /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B5A7DBE22A4F1B9500BDF7EF /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBCF2A4EE72100BDF7EF /* Model */,
+				B5A7DBD02A4EE73600BDF7EF /* View */,
+				B5A7DBD92A4EF53700BDF7EF /* Presenter */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
 		B5C4E0C62A4D990100EE25C2 = {
 			isa = PBXGroup;
 			children = (
 				B5C4E0D12A4D990100EE25C2 /* TableAlamofire */,
-				B5C4E0D02A4D990100EE25C2 /* Products */,
 				577F58F1C2E292B21138B2E6 /* Pods */,
 				B3E1E757D71BA2D93B1AA73C /* Frameworks */,
 			);
@@ -76,18 +217,15 @@
 				B5C4E0CF2A4D990100EE25C2 /* TableAlamofire.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B5C4E0D12A4D990100EE25C2 /* TableAlamofire */ = {
 			isa = PBXGroup;
 			children = (
-				B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */,
-				B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */,
-				B5C4E0D62A4D990100EE25C2 /* ViewController.swift */,
-				B5C4E0D82A4D990100EE25C2 /* Main.storyboard */,
-				B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */,
-				B5C4E0DD2A4D990300EE25C2 /* LaunchScreen.storyboard */,
-				B5C4E0E02A4D990300EE25C2 /* Info.plist */,
+				B5A7DBD32A4EE77E00BDF7EF /* Sources */,
+				B5A7DBD62A4EE7B000BDF7EF /* Resouces */,
+				B5C4E0D02A4D990100EE25C2 /* Products */,
 			);
 			path = TableAlamofire;
 			sourceTree = "<group>";
@@ -153,7 +291,6 @@
 			files = (
 				B5C4E0DF2A4D990300EE25C2 /* LaunchScreen.storyboard in Resources */,
 				B5C4E0DC2A4D990300EE25C2 /* Assets.xcassets in Resources */,
-				B5C4E0DA2A4D990100EE25C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,23 +326,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A7DBCD2A4ED52000BDF7EF /* Factories.swift in Sources */,
 				B5C4E0D72A4D990100EE25C2 /* ViewController.swift in Sources */,
+				B5A7DBD82A4EF4FE00BDF7EF /* MainPresenter.swift in Sources */,
 				B5C4E0D32A4D990100EE25C2 /* AppDelegate.swift in Sources */,
+				B5A7DBDE2A4F1AF900BDF7EF /* DetailPresenter.swift in Sources */,
+				B5C4E0E92A4DA20800EE25C2 /* Cell.swift in Sources */,
+				B5A7DBDB2A4EF7C700BDF7EF /* Network.swift in Sources */,
+				B5C4E0EB2A4DC72300EE25C2 /* DetailViewController.swift in Sources */,
 				B5C4E0D52A4D990100EE25C2 /* SceneDelegate.swift in Sources */,
+				B5C4E0E72A4D9FB000EE25C2 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B5C4E0D82A4D990100EE25C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B5C4E0D92A4D990100EE25C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B5C4E0DD2A4D990300EE25C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,10 +477,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H87TDKA3ZG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TableAlamofire/Info.plist;
+				INFOPLIST_FILE = TableAlamofire/Resouces/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -370,10 +505,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H87TDKA3ZG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TableAlamofire/Info.plist;
+				INFOPLIST_FILE = TableAlamofire/Resouces/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
