@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1CA5AD9626ACEBC9F7BAC428 /* libPods-TableAlamofire.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B426CE0A6BBD39BA17F9CEC /* libPods-TableAlamofire.a */; };
 		B5A7DBCD2A4ED52000BDF7EF /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DBCC2A4ED52000BDF7EF /* Factories.swift */; };
+		B5A7DBD82A4EF4FE00BDF7EF /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DBD72A4EF4FE00BDF7EF /* Presenter.swift */; };
+		B5A7DBDB2A4EF7C700BDF7EF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DBDA2A4EF7C700BDF7EF /* Network.swift */; };
 		B5C4E0D32A4D990100EE25C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */; };
 		B5C4E0D52A4D990100EE25C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */; };
 		B5C4E0D72A4D990100EE25C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4E0D62A4D990100EE25C2 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 		0B426CE0A6BBD39BA17F9CEC /* libPods-TableAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TableAlamofire.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A484B1AFE159C80998D6527 /* Pods-TableAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableAlamofire.debug.xcconfig"; path = "Target Support Files/Pods-TableAlamofire/Pods-TableAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
 		B5A7DBCC2A4ED52000BDF7EF /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		B5A7DBD72A4EF4FE00BDF7EF /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		B5A7DBDA2A4EF7C700BDF7EF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B5C4E0CF2A4D990100EE25C2 /* TableAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,14 +86,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B5A7DBD02A4EE73600BDF7EF /* Scenes */ = {
+		B5A7DBD02A4EE73600BDF7EF /* View */ = {
 			isa = PBXGroup;
 			children = (
 				B5C4E0D62A4D990100EE25C2 /* ViewController.swift */,
 				B5C4E0EA2A4DC72300EE25C2 /* DetailViewController.swift */,
 				B5A7DBD12A4EE73D00BDF7EF /* Cell */,
 			);
-			path = Scenes;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B5A7DBD12A4EE73D00BDF7EF /* Cell */ = {
@@ -112,8 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				B5A7DBCE2A4EE70200BDF7EF /* App */,
-				B5A7DBD02A4EE73600BDF7EF /* Scenes */,
+				B5A7DBDC2A4EF7D400BDF7EF /* Network */,
 				B5A7DBCF2A4EE72100BDF7EF /* Model */,
+				B5A7DBD02A4EE73600BDF7EF /* View */,
+				B5A7DBD92A4EF53700BDF7EF /* Presenter */,
 				B5A7DBD22A4EE74E00BDF7EF /* Factories */,
 			);
 			path = Sources;
@@ -143,6 +149,22 @@
 				B5A7DBD52A4EE7A300BDF7EF /* Configs */,
 			);
 			path = Resouces;
+			sourceTree = "<group>";
+		};
+		B5A7DBD92A4EF53700BDF7EF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBD72A4EF4FE00BDF7EF /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B5A7DBDC2A4EF7D400BDF7EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBDA2A4EF7C700BDF7EF /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		B5C4E0C62A4D990100EE25C2 = {
@@ -271,8 +293,10 @@
 			files = (
 				B5A7DBCD2A4ED52000BDF7EF /* Factories.swift in Sources */,
 				B5C4E0D72A4D990100EE25C2 /* ViewController.swift in Sources */,
+				B5A7DBD82A4EF4FE00BDF7EF /* Presenter.swift in Sources */,
 				B5C4E0D32A4D990100EE25C2 /* AppDelegate.swift in Sources */,
 				B5C4E0E92A4DA20800EE25C2 /* Cell.swift in Sources */,
+				B5A7DBDB2A4EF7C700BDF7EF /* Network.swift in Sources */,
 				B5C4E0EB2A4DC72300EE25C2 /* DetailViewController.swift in Sources */,
 				B5C4E0D52A4D990100EE25C2 /* SceneDelegate.swift in Sources */,
 				B5C4E0E72A4D9FB000EE25C2 /* Model.swift in Sources */,
