@@ -65,6 +65,86 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B5A7DBCE2A4EE70200BDF7EF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */,
+				B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B5A7DBCF2A4EE72100BDF7EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0E62A4D9FB000EE25C2 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5A7DBD02A4EE73600BDF7EF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0D62A4D990100EE25C2 /* ViewController.swift */,
+				B5C4E0EA2A4DC72300EE25C2 /* DetailViewController.swift */,
+				B5A7DBD12A4EE73D00BDF7EF /* Cell */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B5A7DBD12A4EE73D00BDF7EF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0E82A4DA20800EE25C2 /* Cell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B5A7DBD22A4EE74E00BDF7EF /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBCC2A4ED52000BDF7EF /* Factories.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		B5A7DBD32A4EE77E00BDF7EF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B5A7DBCE2A4EE70200BDF7EF /* App */,
+				B5A7DBD02A4EE73600BDF7EF /* Scenes */,
+				B5A7DBCF2A4EE72100BDF7EF /* Model */,
+				B5A7DBD22A4EE74E00BDF7EF /* Factories */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B5A7DBD42A4EE78F00BDF7EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0DD2A4D990300EE25C2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B5A7DBD52A4EE7A300BDF7EF /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0E02A4D990300EE25C2 /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		B5A7DBD62A4EE7B000BDF7EF /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */,
+				B5A7DBD42A4EE78F00BDF7EF /* Storyboards */,
+				B5A7DBD52A4EE7A300BDF7EF /* Configs */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
 		B5C4E0C62A4D990100EE25C2 = {
 			isa = PBXGroup;
 			children = (
@@ -86,16 +166,8 @@
 		B5C4E0D12A4D990100EE25C2 /* TableAlamofire */ = {
 			isa = PBXGroup;
 			children = (
-				B5C4E0D22A4D990100EE25C2 /* AppDelegate.swift */,
-				B5C4E0D42A4D990100EE25C2 /* SceneDelegate.swift */,
-				B5C4E0D62A4D990100EE25C2 /* ViewController.swift */,
-				B5C4E0EA2A4DC72300EE25C2 /* DetailViewController.swift */,
-				B5C4E0E62A4D9FB000EE25C2 /* Model.swift */,
-				B5C4E0E82A4DA20800EE25C2 /* Cell.swift */,
-				B5A7DBCC2A4ED52000BDF7EF /* Factories.swift */,
-				B5C4E0DB2A4D990300EE25C2 /* Assets.xcassets */,
-				B5C4E0DD2A4D990300EE25C2 /* LaunchScreen.storyboard */,
-				B5C4E0E02A4D990300EE25C2 /* Info.plist */,
+				B5A7DBD32A4EE77E00BDF7EF /* Sources */,
+				B5A7DBD62A4EE7B000BDF7EF /* Resouces */,
 				B5C4E0D02A4D990100EE25C2 /* Products */,
 			);
 			path = TableAlamofire;
@@ -345,7 +417,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H87TDKA3ZG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TableAlamofire/Info.plist;
+				INFOPLIST_FILE = TableAlamofire/Resouces/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -373,7 +445,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H87TDKA3ZG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TableAlamofire/Info.plist;
+				INFOPLIST_FILE = TableAlamofire/Resouces/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
